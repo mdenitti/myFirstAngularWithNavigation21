@@ -42,15 +42,7 @@
     <div class="row">
       <div class="col">
         <router-outlet />
-        {{name.toUpperCase()}}
-        {{cost * 1.21}}
-        <button class="btn btn-primary" [disabled]="isLoading">Submit</button>
-        
-        <input [(ngModel)]="inputValue" class="form-control">
-        <button (click)="handleClick()">Click me!</button>
-       <button (click)="resetClick()">Reset!</button>
-       
-        <div [innerHTML]="content"></div>
+
       </div>
       
     </div>
