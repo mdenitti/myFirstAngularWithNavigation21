@@ -1,0 +1,23 @@
+<p>home works!</p>
+<p>This is a first inserted component</p>
+
+@for (item of items; track item.id) {
+  <div class="card m-2 p-2">
+    <h3>{{ item.name }}</h3>
+    <p>{{ item.price * btw }}</p>
+    <button class="btn btn-light">Details</button>
+    @switch (item.status) {
+        @case ('pending') {
+            <span class="badge yellow">⏳ Pending</span>
+        }
+        @case ('approved') {
+            <span class="badge green">✅ Approved</span>
+        }
+        @case ('rejected') {
+            <span class="badge red">❌ Rejected</span>
+        }
+    }
+  </div>
+} @empty {
+  <p>No items found. Add some! 📭</p>
+}
